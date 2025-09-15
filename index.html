@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Web - Đăng nhập & Ẩn danh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    .login { background: #4CAF50; color: white; }
+    .register { background: #2196F3; color: white; }
+    .anonymous { background: #9C27B0; color: white; }
+    #message {
+      margin-top: 15px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Chào mừng bạn</h2>
+    <button class="login" onclick="showMessage('Bạn đã chọn: Đăng nhập')">Đăng nhập</button>
+    <button class="register" onclick="showMessage('Bạn đã chọn: Đăng ký')">Đăng ký</button>
+    <button class="anonymous" onclick="showMessage('Bạn đã chọn: Ẩn danh')">Ẩn danh</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function showMessage(text) {
+      document.getElementById('message').innerText = text;
+    }
+  </script>
+</body>
+</html>
